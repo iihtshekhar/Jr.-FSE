@@ -1,19 +1,16 @@
-package com.skill.dto;
+package com.skill.entitys;
 
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class Skills {
 
-	@Length(min = 5, max = 20)
-	@NotNull
 	private String skillName;
-	
+	private int skillValue;
+	private String skillLevel;
+	private String remark;
 	public String getSkillName() {
 		return skillName;
 	}
@@ -56,22 +53,8 @@ public class Skills {
 	public void setSkillExperience(int skillExperience) {
 		this.skillExperience = skillExperience;
 	}
-	@NotNull
-	private int skillValue;
-	@Length(min = 2, max = 20)
-	@NotNull
-	private String skillLevel;
-	@Length(min = 5, max = 40)
-	@NotNull
-	private String remark;
-	@Length(min = 5, max = 40)
-	@NotNull
 	private Category skillCategory;
-	@Length(min = 5, max = 40)
-	@NotNull
 	private SkillType skillType;
-	@Length(min = 5, max = 40)
-	@NotNull
 	private int skillExperience;
 	
 }
