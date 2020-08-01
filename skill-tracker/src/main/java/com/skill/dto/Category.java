@@ -9,7 +9,7 @@ import lombok.Data;
 
 
 public class Category {
-	@Id
+	@NotNull
 	public Integer categoryId;
 	@Length(min = 5, max = 30)
 	@NotNull
